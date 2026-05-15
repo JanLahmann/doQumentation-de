@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.40dd0078.js" defer="defer"></script>
-<script src="/assets/js/main.ae9b4f6b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.74d66b53.js" defer="defer"></script>
+<script src="/assets/js/main.91500703.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -47,6 +47,8 @@
 <li class=""><strong>Irreversibilität:</strong> Eine CHF ist eine <abbr title="A mathematical function that is relatively easy to compute in one direction but extremely difficult to reverse." style="text-decoration:underline dotted;text-underline-offset:2px;cursor:help"><em>Einwegfunktion</em></abbr>: Aus einem gegebenen Digest soll es praktisch unmöglich sein, das Hashing umzukehren und die Eingabe zu rekonstruieren.</li>
 <li class=""><strong>Näherungsweise Injektivität:</strong> Obwohl CHFs Viele-zu-Eins-Funktionen sind, sollen sie wie Eins-zu-Eins-Funktionen wirken. Dies wird durch eine enorm große Ausgabemenge in Kombination mit dem Lawineneffekt erreicht, bei dem kleine Änderungen in der Eingabe zu sehr unterschiedlichen Digests führen. Diese Eigenschaft wird als näherungsweise Injektivität bezeichnet.</li>
 </ol>
+<p><img decoding="async" loading="lazy" alt="Fig 2: Digital signatures" src="/assets/images/digital-signature-f30b9f1a727ed5ce7e5c45f780a514fe.svg" width="1259" height="523" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Fig 1: Secure hashing for data integrity checks" src="/assets/images/data-integrity-89f9ea689b46a867d9b3f39648f50cba.svg" width="983" height="445" class="img_ev3q"></p>
 <p>Auf dieser Basis lässt sich ein Datenstück gegen die Originalversion validieren, indem ein Digest der Daten mit einem Digest des Originals verglichen wird.</p>
 <ul>
 <li class="">Stimmen die beiden Digests überein, kann mit hoher Wahrscheinlichkeit davon ausgegangen werden, dass die Daten mit dem Original identisch sind.</li>
