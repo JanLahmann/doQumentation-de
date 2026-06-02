@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.61a6a264.js" defer="defer"></script>
-<script src="/assets/js/main.226df271.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.8c1d09e5.js" defer="defer"></script>
+<script src="/assets/js/main.c0560b7d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -25,9 +25,10 @@
 <!-- -->
 <!-- -->
 <!-- -->
+<!-- -->
 <p><em>Geschätzte Laufzeit: Zwei Minuten auf einem Eagle-Prozessor (HINWEIS: Dies ist nur eine Schätzung. Deine tatsächliche Laufzeit kann abweichen.)</em></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">Hintergrund<a href="#background" class="hash-link" aria-label="Direkter Link zur Hintergrund" title="Direkter Link zur Hintergrund" translate="no">​</a></h2>
-<p>In diesem Notebook betrachten wir die Simulation einer periodischen Qubitkette, bei der zwischen je zwei benachbarten Qubits eine Zwei-Qubit-Operation durchgeführt wird – einschließlich des ersten und des letzten Qubits. Periodische Ketten treten häufig in physikalischen und chemischen Problemen auf, beispielsweise bei Ising-Modellen und molekularen Simulationen.</p>
+<p>In diesem Notebook betrachten wir die Simulation einer periodischen Qubitkette, bei der zwischen je zwei benachbarten Qubits eine Zwei-Qubit-Operation durchgeführt wird – einschlie ßlich des ersten und des letzten Qubits. Periodische Ketten treten häufig in physikalischen und chemischen Problemen auf, beispielsweise bei Ising-Modellen und molekularen Simulationen.</p>
 <p>Aktuelle IBM Quantum®-Geräte sind planar. Bei manchen periodischen Ketten lässt sich die Topologie so nutzen, dass der erste und der letzte Qubit direkt benachbart sind. Bei hinreichend großen Problemen jedoch können der erste und der letzte Qubit weit voneinander entfernt sein, sodass viele SWAP-Gates für die Zwei-Qubit-Operation zwischen diesen beiden Qubits benötigt werden. Dieses Problem der periodischen Randbedingungen wurde in <a href="https://arxiv.org/abs/2402.17833">diesem Paper</a> untersucht.</p>
 <p>In diesem Notebook zeigen wir den Einsatz von Circuit Cutting für ein solches periodisches Kettenproblem im Utility-Maßstab, bei dem der erste und der letzte Qubit keine Nachbarn sind. Das Schneiden dieser weitreichenden Konnektivität vermeidet die zusätzlichen SWAP-Gates – auf Kosten der Ausführung mehrerer Circuit-Instanzen und einiger klassischer Nachverarbeitung. Zusammenfassend lässt sich sagen, dass Circuit Cutting genutzt werden kann, um die weitreichenden Zwei-Qubit-Operationen logisch zu berechnen. Dies führt effektiv zu einer erhöhten Konnektivität der Coupling Map und damit zu einer geringeren Anzahl von SWAP-Gates.</p>
 <p>Es gibt zwei Arten von Schnitten: das Schneiden der Leitung eines Circuits (sogenanntes <code>Wire Cutting</code>) oder das Ersetzen eines Zwei-Qubit-Gates durch mehrere Einzel-Qubit-Operationen (sogenanntes <code>Gate Cutting</code>). In diesem Notebook konzentrieren wir uns auf Gate Cutting. Weitere Details zu Gate Cutting findest du in den <a href="https://qiskit.github.io/qiskit-addon-cutting/explanation/index.html">Erklärungsmaterialien</a> in <code>qiskit-addon-cutting</code> und den entsprechenden Referenzen. Für mehr Details zu Wire Cutting, schau dir das Tutorial <a class="" href="/tutorials/wire-cutting">Wire Cutting zur Schätzung von Erwartungswerten</a> oder die Tutorials in <a href="https://qiskit.github.io/qiskit-addon-cutting/tutorials/index.html">qiskit-addon-cutting</a> an.</p>
