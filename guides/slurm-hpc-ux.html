@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.122a3ccc.js" defer="defer"></script>
-<script src="/assets/js/main.6a18512d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1ab18aad.js" defer="defer"></script>
+<script src="/assets/js/main.cac04fc5.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/slurm-hpc-ux" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -51,52 +51,80 @@ Diese Variablen werden von QRMI verwendet. (Siehe die README-Dateien in den vers
 <p>Siehe das <a href="https://github.com/qiskit-community/qrmi/tree/main/examples/qiskit_primitives/" target="_blank" rel="noopener noreferrer" class="">Beispielverzeichnis</a> für Beispieldateien.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="backend-specifics">Backend-Besonderheiten<a href="#backend-specifics" class="hash-link" aria-label="Direkter Link zur Backend-Besonderheiten" title="Direkter Link zur Backend-Besonderheiten" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="ibm-quantum-system-api">IBM Quantum System API<a href="#ibm-quantum-system-api" class="hash-link" aria-label="Direkter Link zur IBM Quantum System API" title="Direkter Link zur IBM Quantum System API" translate="no">​</a></h4>
-<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="administrator-scope-ibm">Administrator-Bereich<a href="#administrator-scope-ibm" class="hash-link" aria-label="Direkter Link zur Administrator-Bereich" title="Direkter Link zur Administrator-Bereich" translate="no">​</a></h5>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="administrator-scope-1">Administrator-Bereich<a href="#administrator-scope-1" class="hash-link" aria-label="Direkter Link zur Administrator-Bereich" title="Direkter Link zur Administrator-Bereich" translate="no">​</a></h5>
 <p>Die Konfiguration von Quantum System API-Backends (HPC-Admin-Bereich) umfasst Endpunkte und Zugangsdaten für den Quantum System-Endpunkt und Authentifizierungsdienste sowie den S3-Endpunkt.
 Konkret umfasst dies:</p>
 <ul>
-<li class="">IBM Cloud® API-Schlüssel zur Erstellung von Bearer-Tokens</li>
-<li class="">Endpunkt der Quantum System API</li>
-<li class="">S3-Bucket und Zugriffsdetails</li>
+<li class="">
+<p>IBM Cloud® API-Schlüssel zur Erstellung von Bearer-Tokens</p>
+</li>
+<li class="">
+<p>Endpunkt der Quantum System API</p>
+</li>
+<li class="">
+<p>S3-Bucket und Zugriffsdetails</p>
+</li>
 </ul>
 <p>Zugangsdaten sollten für HPC-Benutzer oder andere nicht privilegierte Benutzer auf dem System nicht sichtbar sein.
 Daher können sensible Daten in separaten Dateien abgelegt werden, die entsprechend zugriffsgeschützt werden können.</p>
 <p>Beachte, dass Slurm vollen Zugriff auf das Backend hat.
 Dies hat mehrere Implikationen:</p>
 <ul>
-<li class="">Das Slurm-Plugin ist für die Mandantenfähigkeit verantwortlich (es stellt sicher, dass Benutzer die Ergebnisse der Jobs anderer Benutzer nicht sehen)</li>
-<li class="">Die HPC-Cluster-Seite ist dafür verantwortlich, Benutzer zu prüfen (wer auf die QPU zugreifen darf) und den entsprechenden Zugriff sicherzustellen</li>
-<li class="">Die Kapazität und Priorität der QPU-Nutzung wird ausschließlich durch Slurm verwaltet; es gibt keine andere Benutzerplanung außerhalb von Slurm</li>
+<li class="">
+<p>Das Slurm-Plugin ist für die Mandantenfähigkeit verantwortlich (es stellt sicher, dass Benutzer die Ergebnisse der Jobs anderer Benutzer nicht sehen)</p>
+</li>
+<li class="">
+<p>Die HPC-Cluster-Seite ist dafür verantwortlich, Benutzer zu prüfen (wer auf die QPU zugreifen darf) und den entsprechenden Zugriff sicherzustellen</p>
+</li>
+<li class="">
+<p>Die Kapazität und Priorität der QPU-Nutzung wird ausschließlich durch Slurm verwaltet; es gibt keine andere Benutzerplanung außerhalb von Slurm</p>
+</li>
 </ul>
-<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-scope-ibm">Benutzer-Bereich<a href="#user-scope-ibm" class="hash-link" aria-label="Direkter Link zur Benutzer-Bereich" title="Direkter Link zur Benutzer-Bereich" translate="no">​</a></h5>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-scope-1">Benutzer-Bereich<a href="#user-scope-1" class="hash-link" aria-label="Direkter Link zur Benutzer-Bereich" title="Direkter Link zur Benutzer-Bereich" translate="no">​</a></h5>
 <p>Ausführungs-Lanes werden dem HPC-Administrator oder dem Benutzer nicht direkt angezeigt.
 Stattdessen können während der Laufzeit zwei verschiedene Modi von HPC-Benutzern angegeben werden:</p>
 <ul>
-<li class=""><code>exclusive=true</code> gibt an, dass keine anderen Jobs die Ressource gleichzeitig verwenden können. Ein Job im exklusiven Modus erhält alle Ausführungs-Lanes und kann nicht gleichzeitig mit einem nicht-exklusiven Job ausgeführt werden</li>
-<li class=""><code>exclusive=false</code> erlaubt anderen Jobs die parallele Ausführung. In diesem Fall können so viele Jobs gleichzeitig laufen, wie es Ausführungs-Lanes gibt, und dem Job wird eine Lane zugewiesen</li>
+<li class="">
+<p><code>exclusive=true</code> gibt an, dass keine anderen Jobs die Ressource gleichzeitig verwenden können. Ein Job im exklusiven Modus erhält alle Ausführungs-Lanes und kann nicht gleichzeitig mit einem nicht-exklusiven Job ausgeführt werden</p>
+</li>
+<li class="">
+<p><code>exclusive=false</code> erlaubt anderen Jobs die parallele Ausführung. In diesem Fall können so viele Jobs gleichzeitig laufen, wie es Ausführungs-Lanes gibt, und dem Job wird eine Lane zugewiesen</p>
+</li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="qiskit-runtime-service">Qiskit Runtime Service<a href="#qiskit-runtime-service" class="hash-link" aria-label="Direkter Link zur Qiskit Runtime Service" title="Direkter Link zur Qiskit Runtime Service" translate="no">​</a></h4>
-<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-scope-qiskit">Benutzer-Bereich<a href="#user-scope-qiskit" class="hash-link" aria-label="Direkter Link zur Benutzer-Bereich" title="Direkter Link zur Benutzer-Bereich" translate="no">​</a></h5>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="ibm-quantum-compute-service">IBM Quantum Compute Service<a href="#ibm-quantum-compute-service" class="hash-link" aria-label="Direkter Link zur IBM Quantum Compute Service" title="Direkter Link zur IBM Quantum Compute Service" translate="no">​</a></h4>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-scope-2">Benutzer-Bereich<a href="#user-scope-2" class="hash-link" aria-label="Direkter Link zur Benutzer-Bereich" title="Direkter Link zur Benutzer-Bereich" translate="no">​</a></h5>
 <p>Es wird erwartet, dass Benutzer zusätzliche Zugriffsdetails in Umgebungsvariablen angeben.
 Konkret umfasst dies Folgendes:</p>
 <ul>
-<li class="">Qiskit Runtime-Serviceinstanz (CRN, Cloud Resource Name)</li>
-<li class="">Endpunkt für Qiskit Runtime (sofern nicht automatisch aus dem CRN erkannt)</li>
-<li class="">API-Schlüssel, der Zugriff auf den CRN hat</li>
-<li class="">S3-Instanz, Bucket und Zugriffstoken/Zugangsdaten für Datenübertragungen</li>
+<li class="">
+<p>IBM Quantum Compute Service-Instanz (CRN, Cloud Resource Name)</p>
+</li>
+<li class="">
+<p>Endpunkt für Quantum Compute (sofern nicht automatisch aus dem CRN erkannt)</p>
+</li>
+<li class="">
+<p>API-Schlüssel, der Zugriff auf den CRN hat</p>
+</li>
+<li class="">
+<p>S3-Instanz, Bucket und Zugriffstoken/Zugangsdaten für Datenübertragungen</p>
+</li>
 </ul>
-<p>Diese Details bestimmen, unter welchem Benutzer und welcher Serviceinstanz der Qiskit Runtime-Dienst genutzt wird.
+<p>Diese Details bestimmen, unter welchem Benutzer und welcher Serviceinstanz IBM Quantum Compute Service genutzt wird.
 Entsprechend berücksichtigt das IBM Quantum® Platform-Scheduling die Fähigkeiten des Benutzers und der Serviceinstanz bei der Planung.</p>
 <p>Derzeit müssen Benutzer die obigen Details selbst angeben (kein gemeinsamer clusterweiter Quantenzugang).</p>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="pasqal-cloud-services">Pasqal Cloud Services<a href="#pasqal-cloud-services" class="hash-link" aria-label="Direkter Link zur Pasqal Cloud Services" title="Direkter Link zur Pasqal Cloud Services" translate="no">​</a></h4>
-<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="hpc-admin-scope-pasqal">HPC-Admin-Bereich<a href="#hpc-admin-scope-pasqal" class="hash-link" aria-label="Direkter Link zur HPC-Admin-Bereich" title="Direkter Link zur HPC-Admin-Bereich" translate="no">​</a></h5>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="hpc-admin-scope">HPC-Admin-Bereich<a href="#hpc-admin-scope" class="hash-link" aria-label="Direkter Link zur HPC-Admin-Bereich" title="Direkter Link zur HPC-Admin-Bereich" translate="no">​</a></h5>
 <p>Für HPC-Admins ist keine spezifische Einrichtung für die PCS-Nutzung erforderlich.</p>
-<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="hpc-user-scope-pasqal">HPC-Benutzer-Bereich<a href="#hpc-user-scope-pasqal" class="hash-link" aria-label="Direkter Link zur HPC-Benutzer-Bereich" title="Direkter Link zur HPC-Benutzer-Bereich" translate="no">​</a></h5>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="hpc-user-scope">HPC-Benutzer-Bereich<a href="#hpc-user-scope" class="hash-link" aria-label="Direkter Link zur HPC-Benutzer-Bereich" title="Direkter Link zur HPC-Benutzer-Bereich" translate="no">​</a></h5>
 <p>Es wird erwartet, dass Benutzer zusätzliche Zugriffsdetails in Umgebungsvariablen angeben.
 Derzeit umfasst dies Folgendes:</p>
 <ul>
-<li class="">PCS-Ressource (FRESNEL, EMU_FRESNEL, EMU_MPS)</li>
-<li class="">Autorisierungstoken</li>
+<li class="">
+<p>PCS-Ressource (FRESNEL, EMU_FRESNEL, EMU_MPS)</p>
+</li>
+<li class="">
+<p>Autorisierungstoken</p>
+</li>
 </ul></div><div class="dq-footer-block"><div class="dq-page-dates"><div class="dq-page-dates__row">Quelle: <a href="https://docs.quantum.ibm.com/guides/slurm-hpc-ux" target="_blank" rel="noopener noreferrer" class="dq-page-dates__link">IBM Quantum docs</a> — aktualisiert <span class="dq-page-dates__date">6. Aug. 2026</span></div><div class="dq-page-dates__row"><a href="https://doqumentation.org/guides/slurm-hpc-ux" class="dq-page-dates__link">Englische Version</a> auf doQumentation — aktualisiert <span class="dq-page-dates__date">6. Aug. 2026</span></div><div class="dq-page-dates__row dq-page-dates__row--translation">Diese Übersetzung basiert auf der englischen Version vom <span class="dq-page-dates__date">11. März 2026</span></div></div><div class="dq-footer-actions"><div class="dq-footer-actions__left"><button class="dq-bookmark-button" title="Seite als Lesezeichen speichern" aria-label="Seite als Lesezeichen speichern"><span class="dq-bookmark-button__icon" aria-hidden="true">☆</span>Lesezeichen</button></div><div class="dq-footer-actions__right"><div class="dq-feedback-actions"><a href="https://github.com/JanLahmann/doQumentation/issues/new" target="_blank" rel="noopener noreferrer" class="dq-site-issue-link" title="Probleme mit Website, Übersetzung oder Codeausführung an doQumentation melden">Problem mit Website oder Übersetzung?</a><a href="https://github.com/Qiskit/documentation/edit/main/docs/guides/slurm-hpc-ux.mdx" target="_blank" rel="noopener noreferrer" class="dq-content-edit-link" title="Inhaltlicher Tippfehler oder technischer Fehler? IBM ist die Quelle — Klick öffnet die Datei im IBM-Quantum-docs-Repository auf GitHub.">Inhaltliches Problem? Auf IBM Quantum docs bearbeiten</a></div></div></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Dokumentationsseiten"><a class="pagination-nav__link pagination-nav__link--prev" href="/guides/slurm-plugin"><div class="pagination-nav__sublabel">Zurück</div><div class="pagination-nav__label">SPANK-Plugin für QRMI</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/guides/qiskit-mcp-servers"><div class="pagination-nav__sublabel">Weiter</div><div class="pagination-nav__label">Qiskit MCP Server</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#configure-qpu-resources-in-job-creation" class="table-of-contents__link toc-highlight">QPU-Ressourcen bei der Job-Erstellung konfigurieren</a><ul><li><a href="#administrator-scope" class="table-of-contents__link toc-highlight">Administrator-Bereich</a></li><li><a href="#user-scope" class="table-of-contents__link toc-highlight">Benutzer-Bereich</a></li><li><a href="#hpc-application-scope" class="table-of-contents__link toc-highlight">HPC-Anwendungsbereich</a></li><li><a href="#backend-specifics" class="table-of-contents__link toc-highlight">Backend-Besonderheiten</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">doQumentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/features">Funktionen</a></li><li class="footer__item"><a class="footer__link-item" href="/jupyter-settings">Einstellungen</a></li><li class="footer__item"><a href="https://github.com/JanLahmann/doQumentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/legal">Legal / Impressum</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">RasQberry</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://rasqberry.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/JanLahmann/RasQberry-Two" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry GitHub<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">IBM Quantum &amp; Qiskit</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://quantum.cloud.ibm.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM Quantum Platform<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://ibm.com/quantum" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM Quantum<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://quantum.cloud.ibm.com/docs/en/guides" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qiskit-Dokumentation<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Qiskit/documentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qiskit Docs GitHub<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://qisk.it/join-slack" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qiskit Slack<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Fun with Quantum family</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://fun-with-quantum.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Fun with Quantum<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://rasqberry.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry Two<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://rasqberry.one" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry One<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://quantego.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Quantego<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://qutie.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qutie<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://qoffee-maker.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qoffee-Maker<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright"><a href="https://github.com/Qiskit/documentation">Qiskit-Dokumentation</a> Inhalte © IBM Corp. Code ist unter Apache 2.0 lizenziert; Inhalte (Tutorials, Kurse, Medien) unter CC BY-SA 4.0.<br>IBM, IBM Quantum und Qiskit sind Marken der IBM Corporation.<br>doQumentation ist Teil des <a href="https://rasqberry.org/">RasQberry</a>-Projekts und ist nicht mit IBM Corporation verbunden, wird nicht von IBM unterstützt oder gesponsert.</div></div></div></footer></div>
 </body>
 </html>

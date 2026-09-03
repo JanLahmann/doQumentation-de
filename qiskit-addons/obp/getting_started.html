@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.122a3ccc.js" defer="defer"></script>
-<script src="/assets/js/main.6a18512d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1ab18aad.js" defer="defer"></script>
+<script src="/assets/js/main.cac04fc5.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,27 +29,37 @@
 <p>Eine Möglichkeit, eine tiefere Rückpropagation in den Schaltkreis zu ermöglichen und gleichzeitig zu verhindern, dass der Operator zu groß wird, besteht darin, Terme mit kleinen Koeffizienten abzuschneiden, anstatt sie zum Operator hinzuzufügen. Das Abschneiden von Termen kann zu weniger auszuführenden Quantenschaltkreisen führen, führt jedoch zu einem gewissen Fehler bei der abschließenden Erwartungswertberechnung, der proportional zur Größe der Koeffizienten der abgeschnittenen Terme ist.
 In diesem Tutorial implementierst du ein <a href="https://quantum.cloud.ibm.com/docs/guides/serverless#qiskit-patterns-with-quantum-serverless" target="_blank" rel="noopener noreferrer" class="">Qiskit-Muster</a> zur Simulation der Quantendynamik einer Heisenberg-Spinkette mittels Operator-Rückpropagation:</p>
 <ul>
-<li class=""><strong>Schritt 1: Auf Quantenproblem abbilden</strong>
+<li class="">
+<p><strong>Schritt 1: Auf Quantenproblem abbilden</strong></p>
 <ul>
 <li class="">Den zeitentwickelten Hamiltonian auf einen Quantenschaltkreis abbilden</li>
 </ul>
 </li>
-<li class=""><strong>Schritt 2: Problem optimieren</strong>
+<li class="">
+<p><strong>Schritt 2: Problem optimieren</strong></p>
 <ul>
-<li class="">Den Schaltkreis in Scheiben teilen</li>
+<li class="">
+<p>Den Schaltkreis in Scheiben teilen</p>
+</li>
 <li class="">
 <font color="#0F62FE">Scheiben vom Schaltkreis auf ein Pauli-Observable rückpropagieren</font>
 </li>
-<li class="">Die verbleibenden Scheiben zu einem einzelnen Schaltkreis zusammenführen</li>
-<li class="">Den Schaltkreis für das Backend transpilieren</li>
+<li class="">
+<p>Die verbleibenden Scheiben zu einem einzelnen Schaltkreis zusammenführen</p>
+</li>
+<li class="">
+<p>Den Schaltkreis für das Backend transpilieren</p>
+</li>
 </ul>
 </li>
-<li class=""><strong>Schritt 3: Experimente ausführen</strong>
+<li class="">
+<p><strong>Schritt 3: Experimente ausführen</strong></p>
 <ul>
 <li class="">Den Erwartungswert mit dem reduzierten Schaltkreis und dem erweiterten Observable mithilfe eines <a href="https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator" target="_blank" rel="noopener noreferrer" class="">StatevectorEstimator</a> berechnen – der Einfachheit halber in diesem Notebook</li>
 </ul>
 </li>
-<li class=""><strong>Schritt 4: Ergebnisse rekonstruieren</strong>
+<li class="">
+<p><strong>Schritt 4: Ergebnisse rekonstruieren</strong></p>
 <ul>
 <li class="">Nicht zutreffend.</li>
 </ul>
@@ -124,6 +134,7 @@ circuit.draw(&quot;mpl&quot;, style=&quot;iqp&quot;, scale=0.6)
 ![Quantum circuit diagram](/img/qiskit-addons/obp/01-getting-started/output_2.png)
 
 ## Schritt 2: Problem optimieren \{#step-2-optimize-the-problem}
+
 ### Schaltkreisscheiben für die Rückpropagation erstellen \{#create-circuit-slices-to-backpropagate}
 
 Denke daran, dass die Funktion ``backpropagate`` jeweils ganze Schaltkreisscheiben rückpropagiert, sodass die Wahl der Aufteilung einen Einfluss darauf haben kann, wie gut die Rückpropagation für ein bestimmtes Problem funktioniert. Hier gruppieren wir Gates desselben Typs mithilfe der Funktion [slice_by_gate_types](https://qiskit.github.io/qiskit-addon-utils/stubs/qiskit_addon_utils.slicing.slice_by_gate_types.html) in Scheiben.
@@ -205,8 +216,8 @@ truncation_error_budget = setup_budget(max_error_per_slice=0.005)
 
 Beachte, dass wir durch die Zuteilung von `5e-3` Fehler pro Scheibe für das Abschneiden 3 weitere Scheiben aus dem Schaltkreis entfernen können, während wir innerhalb des ursprünglichen Budgets von 8 kommutierenden Pauli-Gruppen im Observable bleiben. Standardmäßig verwendet `backpropagate` die L1-Norm der abgeschnittenen Koeffizienten, um den durch das Abschneiden entstandenen Gesamtfehler zu begrenzen. Weitere Optionen findest du im [How-to-Leitfaden zur Angabe der p_norm](https://qiskit.github.io/qiskit-addon-obp/how_tos/bound_error_using_p_norm.html).
 
-In diesem konkreten Beispiel, bei dem wir 10 Scheiben rückpropagiert haben, sollte der Gesamtabschneidefehler ``(5e-3 Fehler/Scheibe) * (10 Scheiben) = 5e-2`` nicht überschreiten.
-Eine weiterführende Diskussion zur Verteilung eines Fehlerbudgets über deine Scheiben findest du in [diesem How-to-Leitfaden](https://qiskit.github.io/qiskit-addon-obp/how_tos/truncate_operator_terms.html).
+In diesem speziellen Beispiel, in dem wir 10 Slices zurückpropagiert haben, sollte der gesamte Trunkierungsfehler ``(5e-3 error/slice) * (10 slices) = 5e-2`` nicht überschreiten.
+Für eine weitere Diskussion zur Verteilung eines Fehlerbudgets über deine Slices, sieh dir [diesen How-to-Guide](https://qiskit.github.io/qiskit-addon-obp/how_tos/truncate_operator_terms.html) an.
 
 ```python
 # Run the same experiment but truncate observable terms with small coefficients
@@ -266,13 +277,14 @@ bp_obs_trunc_isa = bp_obs_trunc.apply_layout(bp_circuit_trunc_isa.layout)
 ```
 
 ## Schritt 3: Quantenexperimente ausführen \{#step-3-execute-quantum-experiments}
+
 ### Erwartungswert berechnen \{#calculate-expectation-value}
 
 Schließlich können wir die rückpropagieren Experimente ausführen und sie mit dem vollständigen Experiment unter Verwendung des rauschfreien [StatevectorEstimator](https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator) vergleichen. Wir können sehen, dass der rückpropagierte Erwartungswert ohne Abschneiden innerhalb der Grenzen der numerischen Genauigkeit äquivalent zum exakten Wert ist.
 
 Der Erwartungswert des Operators mit abgeschnittenen Termen weist einen Fehler in der Größenordnung von ``1e-4`` auf, was innerhalb der erwarteten Toleranz liegt.
 
-**Hinweis:** Wir verwenden einen zustandsvektorbasierten ``Estimator``-Primitiven, um den Effekt des Abschneidens auf die Ausgabe zu veranschaulichen. Um auf dem Backend auszuführen, für das die Experimente in Schritt 2 transpiliert wurden, würde man den [EstimatorV2](https://quantum.cloud.ibm.com/docs/api/qiskit-ibm-runtime/estimator-v2) aus ``qiskit-ibm-runtime`` importieren und die Backend-Instanz an den Konstruktor übergeben.
+**Hinweis:** Wir verwenden eine statevector-basierte ``Estimator``-Primitive, um den Effekt der Trunkierung auf die Ausgabe zu veranschaulichen. Um auf dem Backend auszuführen, für das die Experimente in Schritt 2 transpiliert wurden, würde man [EstimatorV2](https://quantum.cloud.ibm.com/docs/api/qiskit-ibm-runtime/estimator-v2) aus ``qiskit-ibm-runtime`` importieren und die Backend-Instanz an den Konstruktor übergeben.
 
 ```python
 from qiskit.primitives import StatevectorEstimator as Estimator

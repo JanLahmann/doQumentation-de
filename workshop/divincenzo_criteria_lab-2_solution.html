@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.122a3ccc.js" defer="defer"></script>
-<script src="/assets/js/main.6a18512d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1ab18aad.js" defer="defer"></script>
+<script src="/assets/js/main.cac04fc5.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,11 +28,21 @@
 <p>Der Physiker David DiVincenzo hat fünf wesentliche Anforderungen an jede physikalische Implementierung eines Quantencomputers formuliert, sowie zwei zusätzliche Kriterien für die Quantenkommunikation. In diesem Notebook werden wir <strong>jedes DiVincenzo-Kriterium durch praktische Qiskit-Demonstrationen erleben</strong>. Anstatt tief in die Theorie einzutauchen, erklärt jeder Abschnitt kurz ein Kriterium und bietet dann Code-Übungen mit Qiskit 2. Du wirst Circuits auf Simulatoren und echten IBM Quantum-Geräten ausführen, um <strong>jedes Prinzip praktisch zu erkunden</strong>.</p>
 <p><strong>DiVincenzos fünf Kriterien für die Quantenberechnung</strong>:</p>
 <ol>
-<li class=""><strong>Ein skalierbares physikalisches System mit gut charakterisierten Qubits.</strong></li>
-<li class=""><strong>Die Fähigkeit, Qubits</strong> in einen einfachen Referenzzustand zu initialisieren (z. B. |00…0〉).</li>
-<li class=""><strong>Lange Dekohärenzzeiten</strong> (die Qubit-Kohärenz ist deutlich länger als die Gate-Operationszeit).</li>
-<li class=""><strong>Ein universeller Satz von Quantum Gates</strong> (in der Lage, beliebige unitäre Operationen durchzuführen).</li>
-<li class=""><strong>Qubit-spezifische Messfähigkeit</strong> (den Zustand jedes Qubits auslesen).</li>
+<li class="">
+<p><strong>Ein skalierbares physikalisches System mit gut charakterisierten Qubits.</strong></p>
+</li>
+<li class="">
+<p><strong>Die Fähigkeit, Qubits</strong> in einen einfachen Referenzzustand zu initialisieren (z. B. |00…0〉).</p>
+</li>
+<li class="">
+<p><strong>Lange Dekohärenzzeiten</strong> (die Qubit-Kohärenz ist deutlich länger als die Gate-Operationszeit).</p>
+</li>
+<li class="">
+<p><strong>Ein universeller Satz von Quantum Gates</strong> (in der Lage, beliebige unitäre Operationen durchzuführen).</p>
+</li>
+<li class="">
+<p><strong>Qubit-spezifische Messfähigkeit</strong> (den Zustand jedes Qubits auslesen).</p>
+</li>
 </ol>
 <p><em>(DiVincenzo beschrieb auch zwei Kriterien für die Quantenkommunikation: die Fähigkeit, stationäre und „fliegende&quot; Qubits ineinander umzuwandeln, sowie fliegende Qubits zwischen Orten verlässlich zu übertragen. Wir behandeln diese in einer empfohlenen Aktivität am Ende dieses Notebooks.)</em></p>
 <p>Jeder der folgenden Abschnitte entspricht einem Kriterium. Wir werden Qiskit verwenden, um das Konzept mit Code und <strong>interaktiven Experimenten</strong> zu veranschaulichen, die du ausprobieren kannst. Zum Beispiel werden wir sehen, wie die Erhöhung der Anzahl von Qubits und der Circuit-Tiefe das Ergebnis beeinflusst (Kriterium 1), wie man Qubit-Zustände zurücksetzt und vorbereitet (Kriterium 2), wie man Qubits auf Simulatoren vs. echten Geräten misst (Kriterium 4), wie Qiskit universelle Gates zusammensetzt (Kriterium 3), und wie endliche Kohärenz (T₁, T₂) Berechnungen beeinflusst (Kriterium 5). Am Ende wirst du ein tieferes Verständnis davon haben, was jedes DiVincenzo-Kriterium in der Praxis bedeutet und wie Qiskit das Experimentieren damit ermöglicht.</p>
@@ -140,8 +150,12 @@ Du solltest beobachten, dass die Wahrscheinlichkeit <code>P(qubit=1)</code> mit 
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-communication-criteria-flying-qubits">Kriterien für Quantenkommunikation (fliegende Qubits)<a href="#quantum-communication-criteria-flying-qubits" class="hash-link" aria-label="Direkter Link zur Kriterien für Quantenkommunikation (fliegende Qubits)" title="Direkter Link zur Kriterien für Quantenkommunikation (fliegende Qubits)" translate="no">​</a></h2>
 <p>DiVincenzo listete auch zwei Kriterien auf, die speziell für die Quantenkommunikation relevant sind und bei der Entwicklung eines vernetzten Quantencomputers wichtig sind:</p>
 <ol start="6">
-<li class=""><strong>Fähigkeit zur gegenseitigen Umwandlung stationärer und fliegender Qubits.</strong> (Z. B. ein Qubit in einem Prozessor auf ein Photon abbilden, das sich fortbewegen kann.)</li>
-<li class=""><strong>Fähigkeit zur zuverlässigen Übertragung fliegender Qubits zwischen Standorten.</strong> (Z. B. ein Photonen-Qubit durch eine Glasfaser senden, ohne Quanteninformation zu verlieren.)</li>
+<li class="">
+<p><strong>Fähigkeit zur gegenseitigen Umwandlung stationärer und fliegender Qubits.</strong> (Z. B. ein Qubit in einem Prozessor auf ein Photon abbilden, das sich fortbewegen kann.)</p>
+</li>
+<li class="">
+<p><strong>Fähigkeit zur zuverlässigen Übertragung fliegender Qubits zwischen Standorten.</strong> (Z. B. ein Photonen-Qubit durch eine Glasfaser senden, ohne Quanteninformation zu verlieren.)</p>
+</li>
 </ol>
 <p>Diese gehen über die Standard-Qiskit-Nutzung hinaus, da Qiskit sich hauptsächlich mit stationären Qubits auf einem Chip befasst. Wir können das <em>Konzept</em> dieser Kriterien jedoch mit einem einfachen Beispiel veranschaulichen: <strong>Quantenteleportation</strong>. Teleportation zeigt, wie der Zustand eines stationären Qubits in Informationen umgewandelt wird, die von einem verschränkten Paar (dem „fliegenden&quot; Teil) und klassischer Kommunikation getragen werden, die dann zur Rekonstruktion des Zustands auf einem anderen stationären Qubit anderswo verwendet wird.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module">Empfohlene Aktivität: Absolviere das Qiskit in Classrooms-Modul <em>Quantum Teleportation</em><a href="#recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" class="hash-link" aria-label="Direkter Link zur recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" title="Direkter Link zur recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" translate="no">​</a></h3>
@@ -151,11 +165,21 @@ Du solltest beobachten, dass die Wahrscheinlichkeit <code>P(qubit=1)</code> mit 
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion-summary">Fazit &amp; Zusammenfassung<a href="#conclusion-summary" class="hash-link" aria-label="Direkter Link zur Fazit &amp; Zusammenfassung" title="Direkter Link zur Fazit &amp; Zusammenfassung" translate="no">​</a></h2>
 <p>Wir haben eine Reihe von codeorientierten Übungen entwickelt, um die DiVincenzo-Kriterien mithilfe von Qiskit zu veranschaulichen. Durch diese praktischen Beispiele hast du erkundet, wie eine echte Quantencomputingplattform jede Anforderung erfüllt:</p>
 <ul>
-<li class=""><strong>Skalierbarkeit</strong>: Schaltkreise auf mehr Qubits aufbauen und verstehen, wie Rauschen mit der Skalierung zunimmt.</li>
-<li class=""><strong>Initialisierung</strong>: Resets und Zustandsvorbereitung verwenden, um Berechnungen zuverlässig in bekannten Zuständen zu starten.</li>
-<li class=""><strong>Universelle Gates</strong>: Komplexe Operationen in die Basis-Gates einer Maschine transpilieren und beweisen, dass wir jede Berechnung durchführen können.</li>
-<li class=""><strong>Messung</strong>: Qubits auslesen und mit realistischen Auslesefehlern umgehen.</li>
-<li class=""><strong>Kohärenz</strong>: Die Auswirkungen endlicher T₁, T₂ auf die Algorithmustreue sehen und die Notwendigkeit, dass Operationen schnell im Vergleich zur Dekohärenz sind.</li>
+<li class="">
+<p><strong>Skalierbarkeit</strong>: Schaltkreise auf mehr Qubits aufbauen und verstehen, wie Rauschen mit der Skalierung zunimmt.</p>
+</li>
+<li class="">
+<p><strong>Initialisierung</strong>: Resets und Zustandsvorbereitung verwenden, um Berechnungen zuverlässig in bekannten Zuständen zu starten.</p>
+</li>
+<li class="">
+<p><strong>Universelle Gates</strong>: Komplexe Operationen in die Basis-Gates einer Maschine transpilieren und beweisen, dass wir jede Berechnung durchführen können.</p>
+</li>
+<li class="">
+<p><strong>Messung</strong>: Qubits auslesen und mit realistischen Auslesefehlern umgehen.</p>
+</li>
+<li class="">
+<p><strong>Kohärenz</strong>: Die Auswirkungen endlicher T₁, T₂ auf die Algorithmustreue sehen und die Notwendigkeit, dass Operationen schnell im Vergleich zur Dekohärenz sind.</p>
+</li>
 </ul>
 <p>Der Vollständigkeit halber haben wir auch Aspekte der Quantenkommunikation über das Qiskit in Classrooms-Modul <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a> angesprochen und die letzten beiden Kriterien (fliegende Qubits) verknüpft.</p>
 <p>Abschließend sei angemerkt, wie diese Kriterien in einem echten Quantencomputer wie dem von IBM zusammenkommen. Ein Gerät wie <strong>ibmq_brisbane</strong> hat 127 supraleitende Qubits (Kriterium 1), die jeweils in |0〉 starten (Kriterium 2), mit kalibriertem Gate-Satz und Compilern für Universalität (Kriterium 4), Mikrowellen-Ausleseresonatoren für jedes Qubit (Kriterium 5) und Kohärenzzeiten in der Größenordnung von Hunderten von Mikrosekunden gegenüber Nanosekunden-Operationen (Kriterium 3). Für Quantennetzwerkexperimente erforschen IBM und andere die Mikrowellen-zu-optische Transduktion für fliegende Qubits und die Verschränkung entfernter Qubits (Kriterien 6 &amp; 7); das sind aktive Forschungsbereiche.</p>

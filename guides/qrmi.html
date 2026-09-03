@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.122a3ccc.js" defer="defer"></script>
-<script src="/assets/js/main.6a18512d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1ab18aad.js" defer="defer"></script>
+<script src="/assets/js/main.cac04fc5.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/qrmi" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qrmi" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -32,38 +32,68 @@
 <p>Dieser Abschnitt zeigt, wie du QRMI für C und Python erstellst.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements">Voraussetzungen<a href="#requirements" class="hash-link" aria-label="Direkter Link zur Voraussetzungen" title="Direkter Link zur Voraussetzungen" translate="no">​</a></h3>
 <p>QRMI unterstützt die folgenden Betriebssysteme (OS):</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">AlmaLinux 9, Amazon Linux 2023, CentOS Stream 9, CentOS Stream 10,</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">RedHat Enterprise Linux 8, RedHat Enterprise Linux 9,</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">RedHat Enterprise Linux 10, Rocky Linux 8, Rocky Linux 9, SuSE 15,</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Ubuntu 22.04, Ubuntu 24.04, MacOS Sequoia 15.1 or above</span><br></div></code></pre></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">AlmaLinux 9, Amazon Linux 2023, CentOS Stream 9, CentOS Stream 10, </span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">RedHat Enterprise Linux 8, RedHat Enterprise Linux 9, </span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">RedHat Enterprise Linux 10, Rocky Linux 8, Rocky Linux 9, SuSE 15, </span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Ubuntu 22.04, Ubuntu 24.04, MacOS Sequoia 15.1 or above</span><br></div></code></pre></div></div>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="compiling-environment">Kompilierungsumgebung<a href="#compiling-environment" class="hash-link" aria-label="Direkter Link zur Kompilierungsumgebung" title="Direkter Link zur Kompilierungsumgebung" translate="no">​</a></h4>
 <ul>
-<li class=""><a href="https://www.rust-lang.org/tools/install" target="_blank" rel="noopener noreferrer" class="">Rust-Compiler</a> 1.91 oder höher</li>
-<li class="">Ein C-Compiler: zum Beispiel GCC (<code>gcc</code>) unter Linux und Clang (<code>clang-tools-extra</code>) für unbekannte Rust-Ziele / Cross-Compilierungen. QRMI ist mit einem Compiler kompatibel, der dem C11-Standard entspricht</li>
-<li class=""><code>make/cmake</code> (make/cmake RPM für RHEL-kompatible OS)</li>
-<li class=""><code>openssl</code> (openssl-devel RPM für RHEL-kompatible OS)</li>
-<li class=""><code>zlib</code> (zlib-devel RPM für RHEL-kompatible OS)</li>
-<li class="">Python 3.11, 3.12 oder 3.13 (für die Python-API)<!-- -->
+<li class="">
+<p><a href="https://www.rust-lang.org/tools/install" target="_blank" rel="noopener noreferrer" class="">Rust-Compiler</a> 1.91 oder höher</p>
+</li>
+<li class="">
+<p>Ein C-Compiler: zum Beispiel GCC (<code>gcc</code>) unter Linux und Clang (<code>clang-tools-extra</code>) für unbekannte Rust-Ziele / Cross-Compilierungen. QRMI ist mit einem Compiler kompatibel, der dem C11-Standard entspricht</p>
+</li>
+<li class="">
+<p><code>make/cmake</code> (make/cmake RPM für RHEL-kompatible OS)</p>
+</li>
+<li class="">
+<p><code>openssl</code> (openssl-devel RPM für RHEL-kompatible OS)</p>
+</li>
+<li class="">
+<p><code>zlib</code> (zlib-devel RPM für RHEL-kompatible OS)</p>
+</li>
+<li class="">
+<p>Python 3.11, 3.12 oder 3.13 (für die Python-API)</p>
 <ul>
-<li class="">Bibliotheken und Header-Dateien für die Python-Entwicklung (python3.1x-devel RPM für RHEL-kompatible OS):<!-- -->
+<li class="">
+<p>Bibliotheken und Header-Dateien für die Python-Entwicklung (python3.1x-devel RPM für RHEL-kompatible OS):</p>
 <ul>
-<li class="">/usr/include/python3.1x</li>
-<li class="">/usr/lib64/libpython3.1x.so</li>
-</ul>
+<li class="">
+<p>/usr/include/python3.1x</p>
+</li>
+<li class="">
+<p>/usr/lib64/libpython3.1x.so</p>
 </li>
 </ul>
 </li>
-<li class="">Doxygen (zum Generieren der C-API-Dokumentation), je nach OS:<!-- -->
+</ul>
+</li>
+<li class="">
+<p>Doxygen (zum Generieren der C-API-Dokumentation), je nach OS:</p>
 <ul>
-<li class=""><code>dnf install doxygen</code> für Linux (RHEL/CentOS/Rocky Linux und andere)</li>
-<li class=""><code>apt install doxygen</code> für Linux (Ubuntu und andere)</li>
-<li class=""><code>brew install doxygen</code>für MacOS</li>
+<li class="">
+<p><code>dnf install doxygen</code> für Linux (RHEL/CentOS/Rocky Linux und andere)</p>
+</li>
+<li class="">
+<p><code>apt install doxygen</code> für Linux (Ubuntu und andere)</p>
+</li>
+<li class="">
+<p><code>brew install doxygen</code>für MacOS</p>
+</li>
 </ul>
 </li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="runtime-environment">Laufzeitumgebung<a href="#runtime-environment" class="hash-link" aria-label="Direkter Link zur Laufzeitumgebung" title="Direkter Link zur Laufzeitumgebung" translate="no">​</a></h4>
 <ul>
-<li class="">gcc (libgcc RPM für RHEL-kompatible OS)</li>
-<li class="">openssl (openssl-libs RPM für RHEL-kompatible OS)</li>
-<li class="">zlib (zlib RPM für RHEL-kompatible OS)</li>
-<li class="">Python 3.11, 3.12 oder 3.13 (für die Python-API)<!-- -->
+<li class="">
+<p>gcc (libgcc RPM für RHEL-kompatible OS)</p>
+</li>
+<li class="">
+<p>openssl (openssl-libs RPM für RHEL-kompatible OS)</p>
+</li>
+<li class="">
+<p>zlib (zlib RPM für RHEL-kompatible OS)</p>
+</li>
+<li class="">
+<p>Python 3.11, 3.12 oder 3.13 (für die Python-API)</p>
 <ul>
 <li class="">Bibliotheken und Header-Dateien für die Python-Entwicklung (python3.1x-devel RPM für RHEL-kompatible OS)</li>
 </ul>
@@ -94,7 +124,7 @@
 <p>Die Python-API-Dokumentation wird mit <code>pydoc</code> generiert. Nachdem du die virtuelle Umgebung mit dem installierten QRMI-Paket aktiviert hast, führe folgende Befehle aus:</p>
 <div class="language-shell-session codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell-session codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token output">python -m pydoc -p 8290</span><br></div><div class="token-line" style="color:#393A34"><span class="token output">Server ready at http://localhost:8290/</span><br></div><div class="token-line" style="color:#393A34"><span class="token output">Server commands: [b]rowser, [q]uit</span><br></div><div class="token-line" style="color:#393A34"><span class="token output">server&gt; b</span><br></div></code></pre></div></div>
 <p>Öffne dann die folgende Seite in deinem Browser:</p>
-<div class="language-shell-session codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell-session codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token output">http://localhost:8290/qrmi.html</span><br></div></code></pre></div></div>
+<div class="language-shell-session codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell-session codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token output">http://localhost:8290/qrmi.html </span><br></div></code></pre></div></div>
 <p>Stoppe den Server mit:</p>
 <div class="language-shell-session codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell-session codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token output">server&gt; q</span><br></div></code></pre></div></div></div><div class="dq-footer-block"><div class="dq-page-dates"><div class="dq-page-dates__row">Quelle: <a href="https://docs.quantum.ibm.com/guides/qrmi" target="_blank" rel="noopener noreferrer" class="dq-page-dates__link">IBM Quantum docs</a> — aktualisiert <span class="dq-page-dates__date">13. Jan. 2026</span></div><div class="dq-page-dates__row"><a href="https://doqumentation.org/guides/qrmi" class="dq-page-dates__link">Englische Version</a> auf doQumentation — aktualisiert <span class="dq-page-dates__date">13. Jan. 2026</span></div><div class="dq-page-dates__row dq-page-dates__row--translation">Diese Übersetzung basiert auf der englischen Version vom <span class="dq-page-dates__date">13. Jan. 2026</span></div></div><div class="dq-footer-actions"><div class="dq-footer-actions__left"><button class="dq-bookmark-button" title="Seite als Lesezeichen speichern" aria-label="Seite als Lesezeichen speichern"><span class="dq-bookmark-button__icon" aria-hidden="true">☆</span>Lesezeichen</button></div><div class="dq-footer-actions__right"><div class="dq-feedback-actions"><a href="https://github.com/JanLahmann/doQumentation/issues/new" target="_blank" rel="noopener noreferrer" class="dq-site-issue-link" title="Probleme mit Website, Übersetzung oder Codeausführung an doQumentation melden">Problem mit Website oder Übersetzung?</a><a href="https://github.com/Qiskit/documentation/edit/main/docs/guides/qrmi.mdx" target="_blank" rel="noopener noreferrer" class="dq-content-edit-link" title="Inhaltlicher Tippfehler oder technischer Fehler? IBM ist die Quelle — Klick öffnet die Datei im IBM-Quantum-docs-Repository auf GitHub.">Inhaltliches Problem? Auf IBM Quantum docs bearbeiten</a></div></div></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Dokumentationsseiten"><a class="pagination-nav__link pagination-nav__link--prev" href="/guides/create-a-provider"><div class="pagination-nav__sublabel">Zurück</div><div class="pagination-nav__label">Externe Quantenressourcen mit Qiskit integrieren</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/guides/slurm-plugin"><div class="pagination-nav__sublabel">Weiter</div><div class="pagination-nav__label">SPANK-Plugin für QRMI</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#build-the-qrmi-libraries" class="table-of-contents__link toc-highlight">QRMI-Bibliotheken erstellen</a><ul><li><a href="#requirements" class="table-of-contents__link toc-highlight">Voraussetzungen</a></li></ul></li><li><a href="#logging" class="table-of-contents__link toc-highlight">Logging</a></li><li><a href="#build-the-api-documentation" class="table-of-contents__link toc-highlight">API-Dokumentation erstellen</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">doQumentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/features">Funktionen</a></li><li class="footer__item"><a class="footer__link-item" href="/jupyter-settings">Einstellungen</a></li><li class="footer__item"><a href="https://github.com/JanLahmann/doQumentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/legal">Legal / Impressum</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">RasQberry</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://rasqberry.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/JanLahmann/RasQberry-Two" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry GitHub<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">IBM Quantum &amp; Qiskit</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://quantum.cloud.ibm.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM Quantum Platform<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://ibm.com/quantum" target="_blank" rel="noopener noreferrer" class="footer__link-item">IBM Quantum<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://quantum.cloud.ibm.com/docs/en/guides" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qiskit-Dokumentation<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Qiskit/documentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qiskit Docs GitHub<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://qisk.it/join-slack" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qiskit Slack<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Fun with Quantum family</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://fun-with-quantum.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Fun with Quantum<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://rasqberry.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry Two<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://rasqberry.one" target="_blank" rel="noopener noreferrer" class="footer__link-item">RasQberry One<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://quantego.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Quantego<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://qutie.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qutie<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://qoffee-maker.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">Qoffee-Maker<svg width="13.5" height="13.5" aria-label="(öffnet in neuem Tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright"><a href="https://github.com/Qiskit/documentation">Qiskit-Dokumentation</a> Inhalte © IBM Corp. Code ist unter Apache 2.0 lizenziert; Inhalte (Tutorials, Kurse, Medien) unter CC BY-SA 4.0.<br>IBM, IBM Quantum und Qiskit sind Marken der IBM Corporation.<br>doQumentation ist Teil des <a href="https://rasqberry.org/">RasQberry</a>-Projekts und ist nicht mit IBM Corporation verbunden, wird nicht von IBM unterstützt oder gesponsert.</div></div></div></footer></div>
 </body>
