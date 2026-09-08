@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.627254d4.css">
-<script src="/assets/js/runtime~main.4283c6de.js" defer="defer"></script>
-<script src="/assets/js/main.c3d88ce3.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.7288c8d3.js" defer="defer"></script>
+<script src="/assets/js/main.527f0ea1.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/algorithmiq-tem" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -44,7 +44,7 @@ und diese Abbildung dann auf informationsvollständige Messergebnisse anzuwenden
 die aus dem verrauschten Zustand gewonnen wurden, um unverzerrte Schätzer für die
 Observablen zu erhalten.</p>
 <p>Als Vorteil nutzt TEM informationsvollständige Messungen, um Zugang zu einer
-großen Menge gemilderter Erwartungswerte von Observablen zu erhalten, und hat
+großen Menge fehlergeminderter Erwartungswerte von Observablen zu erhalten, und hat
 optimalen Sampling-Overhead auf der Quantenhardware, wie in Filippov et
 al. (2023), <a href="https://arxiv.org/abs/2307.11740" target="_blank" rel="noopener noreferrer" class="">arXiv:2307.11740</a>, und Filippov
 et al. (2024), <a href="https://arxiv.org/abs/2403.13542" target="_blank" rel="noopener noreferrer" class="">arXiv:2403.13542</a> beschrieben. Der
@@ -53,7 +53,7 @@ effiziente Fehlerminderung erforderlich sind – ein entscheidender Faktor für 
 Durchführbarkeit von Quantenberechnungen. Daher hat TEM das Potenzial, einen
 Quantenvorteil in komplexen Szenarien zu ermöglichen, etwa bei Anwendungen in den
 Bereichen Quantenchaos, Vielteilchenphysik, Hubbard-Dynamik und Simulationen
-kleiner Molekülchemie.</p>
+in der Chemie kleiner Moleküle.</p>
 <p>Die wichtigsten Merkmale und Vorteile von TEM lassen sich wie folgt zusammenfassen:</p>
 <ol>
 <li class=""><strong>Optimaler Mess-Overhead</strong>: TEM ist optimal hinsichtlich der
@@ -71,7 +71,7 @@ Messungen schätzt TEM effizient mehrere Observablen mit denselben
 Messdaten vom Quantencomputer.</li>
 <li class=""><strong>Messfehlerminderung</strong>: Die TEM Qiskit Function enthält außerdem eine
 <a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.033154" target="_blank" rel="noopener noreferrer" class="">proprietäre Methode zur Messfehlerminderung</a>,
-die Auslesfehler nach einem kurzen Kalibrierungslauf deutlich reduzieren kann.</li>
+die Auslesefehler nach einem kurzen Kalibrierungslauf deutlich reduzieren kann.</li>
 <li class=""><strong>Genauigkeit</strong>: TEM verbessert die Genauigkeit und Zuverlässigkeit
 digitaler Quantensimulationen erheblich und macht Quantenalgorithmen präziser
 und verlässlicher.</li>
@@ -80,7 +80,7 @@ und verlässlicher.</li>
 <p>Die TEM-Funktion ermöglicht es dir, fehlergeminderte Erwartungswerte für
 mehrere Observablen eines Quantum Circuits mit minimalem Sampling-Overhead zu berechnen.
 Der Circuit wird mit einer informationsvollständigen positiven operatorwertigen
-Maßnahme (IC-POVM) gemessen, und die gesammelten Messergebnisse werden auf einem
+Maß (IC-POVM) gemessen, und die gesammelten Messergebnisse werden auf einem
 klassischen Computer verarbeitet. Diese Messung wird verwendet, um die
 Tensor-Netzwerk-Methoden durchzuführen und eine rausch-invertierende Abbildung
 aufzubauen. Die Funktion wendet eine Abbildung an, die den gesamten verrauschten
@@ -89,10 +89,10 @@ verrauschten Schichten verwendet werden.</p>
 <p><img decoding="async" loading="lazy" alt="TEM-Schemata" src="/assets/images/tem_scheme-3b0ce8de48d658c8be50eca1107670ae.svg" title="Fehlergeminderte Schätzung einer Observablen O durch Nachverarbeitung der Messergebnisse des verrauschten Quantenprozessors. U und N bezeichnen eine ideale Quantenoperation und die zugehörige Rauschkarte, die im Allgemeinen nicht-lokal sein kann (und auf graue Boxen ausgedehnt wird). D steht für einen Tensor von Operatoren, die dual zu den Effekten der IC-Messung sind. Das Rauschminderungsmodul M ist ein Tensor-Netzwerk, das effizient von der Mitte nach außen kontrahiert wird. Die erste Iteration der Kontraktion wird durch die gepunktete lila Linie dargestellt, die zweite durch die gestrichelte Linie und die dritte durch die durchgezogene Linie." width="985" height="562" class="img_ev3q"></p>
 <p>Sobald die Circuits an die Funktion übermittelt werden, werden sie transpiliert und
 optimiert, um die Anzahl der Schichten mit Zwei-Qubit-Gates zu minimieren (den
-rauschintensiveren Gates auf Quantengeräten). Das die Schichten beeinflussende
-Rauschen wird über
+rauschintensiveren Gates auf Quantengeräten). Das Rauschen, das die Schichten
+beeinflusst, wird über
 <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/noise-learner-noise-learner" target="_blank" rel="noopener noreferrer" class="">Qiskit Runtime</a>
-mithilfe eines spärlichen Pauli-Lindblad-Rauschmodells erlernt, wie in E. van den Berg, Z.
+mithilfe eines dünnbesetzten (sparse) Pauli-Lindblad-Rauschmodells erlernt, wie in E. van den Berg, Z.
 Minev, A. Kandala, K. Temme, Nat. Phys. (2023) beschrieben.
 <a href="https://arxiv.org/abs/2201.09866" target="_blank" rel="noopener noreferrer" class="">arXiv:2201.09866</a>.</p>
 <p>Das Rauschmodell ist eine genaue Beschreibung des Rauschens auf dem Gerät und kann
