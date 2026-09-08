@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.627254d4.css">
-<script src="/assets/js/runtime~main.7288c8d3.js" defer="defer"></script>
-<script src="/assets/js/main.527f0ea1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9fef0c6b.js" defer="defer"></script>
+<script src="/assets/js/main.78e88e24.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -53,14 +53,14 @@ Dies war tatsächlich Richard Feynmans Idee in den 1980er Jahren, die zum ersten
 Mehr dazu werden wir später sagen!</p>
 <p>IBM®-Forscher veröffentlichten 2023 ein Paper, das zum ersten Mal zeigte, dass ein Quantencomputer mit modernsten klassischen Techniken zur Simulation eines bestimmten physikalischen Modells mithalten kann.
 Seine Ergebnisse können immer noch durch fortgeschrittene Techniken auf klassischen Computern erreicht werden – aber er übertraf Brute-Force-Algorithmen,
-und er bietet auch einen neuen Datenpunkt, mit dem verschiedene Simulationsmethoden (die nicht exakt sind und nicht in ihren Vorhersagen übereinstimmen) verglichen werden können.</p>
+und er bietet auch einen neuen Datenpunkt, mit dem verschiedene Simulationsmethoden (die nicht exakt sind und nicht alle in ihren Vorhersagen übereinstimmen) verglichen werden können.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-focus-on-larger-quantum-processors">Fokus auf größere Quantenprozessoren<a href="#a-focus-on-larger-quantum-processors" class="hash-link" aria-label="Direkter Link zur Fokus auf größere Quantenprozessoren" title="Direkter Link zur Fokus auf größere Quantenprozessoren" translate="no">​</a></h3>
 <p>Frühere Nutzer von IBM-Quantenhardware haben möglicherweise bemerkt, dass die kleineren Prozessoren, die wir zuvor der Öffentlichkeit zur Verfügung gestellt haben, offline genommen wurden, um Platz für größere Prozessoren (mit 100+ Qubits) zu machen.
 Diese kleineren Prozessoren konnten leicht klassisch simuliert werden.
 Obwohl sie öffentlich zugängliche Zwischenschritte in einer fortschreitenden Technologie darstellten, konnten sie unmöglich Quantum Utility demonstrieren: Alles, was mit ihnen getan werden konnte, hätte genauso leicht mit einer klassischen Simulation durchgeführt werden können.</p>
 <p>Bei etwa 100 Qubits ist das jedoch nicht mehr der Fall. Im Allgemeinen können Quantenprozessoren dieser Größe nicht mehr klassisch simuliert werden.
 Das stellt eine Art Phasenübergang dar – in eine neue Ära der Quantencomputing-Technologie, in der das <em>Potenzial</em> für das Übertreffen klassischer Berechnungen existiert.
-Hier hat IBM beschlossen, sich zu konzentrieren – um Quantenrechnerleistung zu suchen und auf einen eventuellen Quantum Advantage hinzuarbeiten.</p>
+Hier hat IBM beschlossen, sich zu konzentrieren – um Quantenrechnerleistung zu suchen und auf einen letztendlichen Quantum Advantage hinzuarbeiten.</p>
 <p>Wir ermutigen unsere Nutzer, diese neuen Geräte voll auszunutzen, mit ihnen zu experimentieren, ihre Grenzen zu testen und aus den Erfahrungen für die nächste Generation von Quantenprozessoren, die derzeit in Entwicklung ist, zu lernen.
 Dieser Kurs soll dir ermöglichen, das zu tun!</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="audience-and-course-goals">Zielgruppe und Kursziele<a href="#audience-and-course-goals" class="hash-link" aria-label="Direkter Link zur Zielgruppe und Kursziele" title="Direkter Link zur Zielgruppe und Kursziele" translate="no">​</a></h3>
@@ -76,7 +76,7 @@ Folgende Themen und Fähigkeiten werden unter anderem behandelt:</p>
 <p>Verwendung von Error-Mitigation-Techniken zur Verbesserung der Hardware-Ergebnisse</p>
 </li>
 <li class="">
-<p>Potenzielle Anwendungsbereiche für nahzeitige Quantencomputer</p>
+<p>Potenzielle Anwendungsbereiche für Quantencomputer der nahen Zukunft</p>
 </li>
 </ul>
 <p>Dieser Kurs behandelt nicht die einführende Theorie des Quantencomputings und setzt grundlegende Kenntnisse über Qubits und Quantum Circuits voraus.
@@ -114,7 +114,7 @@ Durch unser Verständnis der physischen Welt können wir neue Technologien nutze
 In den letzten 5 Jahrzehnten haben wir nicht nur diesen Trend beobachtet, sondern auch seine Früchte geerntet.
 Mit mehr Transistoren auf einem Chip können wir komplexere Berechnungen durchführen und das schneller.
 Das ist der Grund, warum Computer im Laufe der Zeit immer leistungsfähiger geworden sind.</p>
-<p>Das Mooresche „Gesetz&quot; neigt sich jedoch zwangsläufig seinem Ende.
+<p>Das Mooresche „Gesetz&quot; neigt sich jedoch zwangsläufig seinem Ende zu.
 Experten sind uneinig darüber, wann das passieren wird, und einige argumentieren, dass es bereits geschehen ist.
 Aber wir wissen mit Sicherheit, dass es unweigerlich enden muss, weil es eine theoretische Grenze für die Miniaturisierung von Rechenkomponenten gibt.
 Wir können einen Transistor nicht kleiner als ein Atom machen!
@@ -138,7 +138,7 @@ Klassische Computer hingegen können nur approximieren, was in der Natur tatsäc
 Strömungsdynamik ist bekanntermaßen schwer mathematisch zu simulieren und vorherzusagen.
 Es ist zum Beispiel zu kostspielig und unpraktisch, ein Auto im Gegenwind zu simulieren, daher bauen Automobilhersteller tatsächlich Tunnel mit blasendem Wind und fahren Autos durch sie hindurch, um ihre Leistung zu testen.
 Das heißt, sie erzeugen Wind anstatt ihn zu simulieren.
-Den Bau eines Quantencomputers zur Untersuchung der physischen Welt kann man in gewisser Weise damit vergleichen, einen Windkanal zur Untersuchung von Wind auf Autos zu bauen.
+Den Bau eines Quantencomputers zur Untersuchung der physischen Welt kann man in gewisser Weise damit vergleichen, einen Windkanal zu bauen, um zu untersuchen, wie sich Wind auf Autos auswirkt.
 Quantencomputer können die Naturgesetze auf molekularer Ebene direkt emulieren, da sie in Übereinstimmung mit diesen Gesetzen handeln –
 das bedeutet, sie emulieren die Natur anstatt sie durch Formeln und Berechnungen zu simulieren.</p>
 <p>Andere folgten Feynmans Ideen – und verknüpften diese Ideen mit einer Theorie der <em>Quanteninformation</em>, die sich bereits in der Entwicklung befand.
@@ -151,7 +151,8 @@ Bis vor Kurzem, wenn du mit einem Quantencomputer experimentieren wolltest, muss
 (normalerweise in einem trüben Universitätskellerlabor), und du hättest bestenfalls ein paar sehr verrauschte Qubits.
 Das ist nicht mehr der Fall.
 Im Jahr 2016 stellte IBM Quantum® den ersten Quantenprozessor in der Cloud zur Verfügung.
-Er hatte nur 5 Qubits und relativ hohe Fehlerraten, aber wir haben seitdem einen langen Weg zurückgelegt.</p>
+Er hatte nur 5 Qubits und relativ hohe Fehlerraten, aber wir haben seitdem einen langen Weg zurückgelegt.
+Den aktuellen Stand der Technologie fassen wir in einem späteren Abschnitt zusammen.</p>
 <p>Neben dem Bau von Quantencomputern müssen wir auch Methoden entwickeln, um sie effektiv einzusetzen.
 Während theoretische Fortschritte in Quantenalgorithmen und -protokollen ein starkes Potenzial andeuten, liegt die Herausforderung, praktische Verwendungen für das Quantencomputing zu finden, noch vor uns.
 Die heutigen Quantencomputer können noch keine fehlertoleranten Berechnungen durchführen, die erforderlich wären, um bekannte theoretische Vorteile in praktische Vorteile umzusetzen.
@@ -187,7 +188,7 @@ Drei grundlegende Metriken – <em>Größe</em>, <em>Qualität</em> und <em>Gesc
 <p><strong>Größe.</strong> Mehr Qubits sind offensichtlich besser, aber nur wenn die Erhöhung der Anzahl die Leistung nicht beeinträchtigt
 (was der Fall sein kann). Tatsächlich wollen wir mehr qualitativ hochwertige Qubits, die nicht durch Übersprechen miteinander
 interferieren, wenn wir das nicht wollen. Die Art und Weise, wie die Qubits miteinander verbunden sind, ist ebenfalls wichtig, und
-die Herausforderung, wie man das am besten macht, stellt eine Herausforderung für supraleitende Qubit-Schaltungen dar.</p>
+herauszufinden, wie man das am besten macht, ist eine Herausforderung für supraleitende Qubit-Schaltungen.</p>
 </li>
 <li class="">
 <p><strong>Qualität.</strong> Eine weitere wichtige Metrik, die wir beobachten, um Leistungsverbesserungen im Laufe der Zeit zu verfolgen, ist die
