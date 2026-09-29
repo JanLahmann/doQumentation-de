@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.a758fad9.js" defer="defer"></script>
-<script src="/assets/js/main.c99bde1c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5054bcf9.js" defer="defer"></script>
+<script src="/assets/js/main.a4126f27.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/migrate-to-client-side-primitives" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -25,8 +25,8 @@
 <header><h1>Migration von serverseitigen zu clientseitigen Sampler und Estimator</h1></header>
 <p>Dieser Leitfaden beschreibt, wie du von den <strong>serverseitigen</strong> Implementierungen von IBM Quantum®
 <code>Sampler</code> und <code>Estimator</code> zu ihren neuen <strong>clientseitigen</strong> Implementierungen in
-<code>qiskit-ibm-runtime</code> migrierst. Die Schnittstellen und Optionen sind größtenteils unverändert, sodass die meisten Codes
-unverändert funktionieren, es gibt jedoch einige Verhaltensunterschiede, die du verstehen solltest.</p>
+<code>qiskit-ibm-runtime</code> migrierst. Die Schnittstellen und Optionen sind größtenteils unverändert, sodass der meiste Code
+unverändert funktioniert, es gibt jedoch einige Verhaltensunterschiede, die du verstehen solltest.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">Hintergrund<a href="#background" class="hash-link" aria-label="Direkter Link zur Hintergrund" title="Direkter Link zur Hintergrund" translate="no">​</a></h2>
 <p>Sampler und Estimator sind primitive <em>Schnittstellen</em>, die in Qiskit definiert sind. Der IBM Quantum
 Compute Service (früher Qiskit Runtime) hat historisch die <em>Implementierung</em>
@@ -36,7 +36,7 @@ Fehlerunterdrückung und -minderung — findet auf der Serverseite statt.</p>
 <p>Diese Black-Box-Erfahrung ist praktisch: Du musst dich nicht um Implementierungsdetails
 kümmern. Aber sie macht die Primitives auch schwer zu debuggen, anzupassen oder daraus zu lernen,
 da du nicht sehen kannst, was während der Verarbeitung passiert.</p>
-<p>Das neu eingeführte <a class="" href="/guides/directed-execution-model#directed-execution-model-beta">direkte Ausführungsmodell</a> verfolgt den entgegengesetzten Ansatz und
+<p>Das neu eingeführte <a class="" href="/guides/directed-execution-model#directed-execution-model-beta">gesteuerte Ausführungsmodell</a> verfolgt den entgegengesetzten Ansatz und
 bietet eine <strong>White-Box</strong>-Erfahrung. Alle Designabsichten werden auf der Client-Seite erfasst,
 und ein einzelnes serverseitiges Primitive <a class="" href="/guides/directed-execution-model#executor-primitive"><strong>Executor</strong></a> verarbeitet diese Eingaben genau so, wie
 angewiesen — es trifft keine impliziten Entscheidungen in deinem Namen.</p>
@@ -84,7 +84,7 @@ Verarbeitung zu sehen. Aktiviere Logging auf INFO-Ebene für den <code>qiskit_ib
 ausgewählt ist. Du musst die Rauschmodelle explizit lernen und übergeben.
 Verwende den neuen <a class="" href="/guides/noise-learning#noiselearnerv3"><code>NoiseLearnerV3</code></a>, um zu steuern, wie Circuits
 in Layer aufgeteilt werden. Er nimmt eine Liste von geboxten Circuit-Anweisungen (zum Beispiel
-den eindeutigen Layern) als Eingabe.</p>
+die unterschiedlichen Layer) als Eingabe.</p>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Wichtig</div><div class="admonitionContent_BuS1"><p>PEA und PEC <strong>erfordern</strong> jetzt dieses explizite Muster. Überspringe den Rauschlernschritt nicht,
 sonst schlägt dein Code fehl. Das Messrauschlernen für TREX ist davon nicht betroffen und funktioniert weiterhin wie zuvor.</p></div></div>
 <p>Ebenso musst du, wenn dein Code <code>NoiseLearner</code> verwendet und das resultierende Rauschmodell an den serverseitigen Estimator übergibt, zu <a class="" href="/guides/migrate-to-noise-learner-v3"><code>NoiseLearnerV3</code> migrieren</a>. Verwende NICHT den älteren <code>NoiseLearner</code>, der mit dem neuen Estimator inkompatibel ist.</p>
@@ -159,7 +159,7 @@ wie dokumentiert verwendet werden.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cliffordize-the-circuit-for-efficient-local-simulation">Cliffordisiere den Circuit für effiziente lokale Simulation<a href="#cliffordize-the-circuit-for-efficient-local-simulation" class="hash-link" aria-label="Direkter Link zur Cliffordisiere den Circuit für effiziente lokale Simulation" title="Direkter Link zur Cliffordisiere den Circuit für effiziente lokale Simulation" translate="no">​</a></h3>
 <p>Ein Fake-Backend verwendet einen (verrauschten) Statevector-Simulator, dessen Kosten exponentiell mit
 der Qubit-Anzahl und der Tiefe wachsen. Daher kann ein realistischer Workload-Circuit hängen bleiben oder den Speicher erschöpfen. Da
-lokales Testen nur die Optionspfade ausüben muss (nicht physikalische Ergebnisse reproduzieren muss),
+lokales Testen nur die Optionspfade durchlaufen muss (nicht physikalische Ergebnisse reproduzieren muss),
 reduziere den Circuit zunächst mit
 <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/transpiler-passes-convert-isa-to-clifford" target="_blank" rel="noopener noreferrer" class=""><code>ConvertISAToClifford</code></a> auf einen Clifford-Circuit,
 was jeden <code>RZ</code>/<code>RZZ</code>/<code>RX</code>-Winkel auf das nächste Vielfache von π/2 rundet. Clifford-Circuits
@@ -176,9 +176,9 @@ fehlschlägt. Lege das Observable stattdessen anhand des <strong>Pre-Clifford-IS
 <code>isa_obs = observable.apply_layout(isa_circuit.layout)</code>, führe dann <code>(clifford, isa_obs)</code> aus.</p>
 </li>
 <li class="">
-<p><strong>Parameter werden weggebunden.</strong> Das Runden der Rotationswinkel verwandelt einen parametrischen ISA-Circuit
+<p><strong>Die Parameter entfallen (sie werden fest gebunden).</strong> Das Runden der Rotationswinkel verwandelt einen parametrischen ISA-Circuit
 in einen konkreten Clifford-Circuit, sodass <code>clifford.num_parameters</code> zu <code>0</code> wird. Ein PUB, das noch
-ein Parameterwerte-Array trägt, schlägt bei der Coercion fehl. Für den lokalen Lauf entferne das Parameter-
+ein Parameterwerte-Array trägt, schlägt bei der Coercion fehl. Für den lokalen Lauf entferne das Parameterwerte-
 Array aus dem PUB; der Hardware-Lauf behält den ursprünglichen parametrischen Circuit und seine Werte bei.</p>
 </li>
 </ul>

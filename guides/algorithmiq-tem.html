@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.a758fad9.js" defer="defer"></script>
-<script src="/assets/js/main.c99bde1c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5054bcf9.js" defer="defer"></script>
+<script src="/assets/js/main.a4126f27.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/algorithmiq-tem" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -42,8 +42,8 @@ globalen Rauschkanals darstellt, der den Zustand des Quantenprozessors beeinflus
 und diese Abbildung dann auf informationsvollständige Messergebnisse anzuwenden,
 die aus dem verrauschten Zustand gewonnen wurden, um unverzerrte Schätzer für die
 Observablen zu erhalten.</p>
-<p>Als Vorteil nutzt TEM informationsvollständige Messungen, um Zugang zu einer
-großen Menge fehlergeminderter Erwartungswerte von Observablen zu erhalten, und hat
+<p>Ein Vorteil von TEM ist, dass es informationsvollständige Messungen nutzt und so Zugang zu einer
+großen Menge fehlergeminderter Erwartungswerte von Observablen bietet; zudem hat es einen
 optimalen Sampling-Overhead auf der Quantenhardware, wie in Filippov et
 al. (2023), <a href="https://arxiv.org/abs/2307.11740" target="_blank" rel="noopener noreferrer" class="">arXiv:2307.11740</a>, und Filippov
 et al. (2024), <a href="https://arxiv.org/abs/2403.13542" target="_blank" rel="noopener noreferrer" class="">arXiv:2403.13542</a> beschrieben. Der
@@ -78,7 +78,7 @@ und verlässlicher.</li>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="description">Beschreibung<a href="#description" class="hash-link" aria-label="Direkter Link zur Beschreibung" title="Direkter Link zur Beschreibung" translate="no">​</a></h2>
 <p>Die TEM-Funktion ermöglicht es dir, fehlergeminderte Erwartungswerte für
 mehrere Observablen eines Quantum Circuits mit minimalem Sampling-Overhead zu berechnen.
-Der Circuit wird mit einer informationsvollständigen positiven operatorwertigen
+Der Circuit wird mit einem informationsvollständigen positiven operatorwertigen
 Maß (IC-POVM) gemessen, und die gesammelten Messergebnisse werden auf einem
 klassischen Computer verarbeitet. Diese Messung wird verwendet, um die
 Tensor-Netzwerk-Methoden durchzuführen und eine rausch-invertierende Abbildung
