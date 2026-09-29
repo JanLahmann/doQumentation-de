@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.17d813c1.js" defer="defer"></script>
-<script src="/assets/js/main.383c698b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.abf17fd7.js" defer="defer"></script>
+<script src="/assets/js/main.d132c571.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/set-optimization" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/set-optimization" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -33,7 +33,7 @@ Höhere Optimierungsstufen erzeugen stärker optimierte Schaltkreise auf Kosten 
 Die folgende Tabelle erläutert die Optimierungen, die mit jeder Einstellung durchgeführt werden.</p>
 <table><thead><tr><th>Optimierungsstufe</th><th>Beschreibung</th></tr></thead><tbody><tr><td>0</td><td><p>Keine Optimierung: typischerweise für Hardware-Charakterisierung verwendet</p><ul>
 <li class="">Grundlegende Übersetzung</li>
-<li class="">Layout/Routing: <code>TrivialLayout</code>, wobei dieselben physikalischen Qubit-Nummern wie virtuelle ausgewählt und SWAPs eingefügt werden, um es zum Laufen zu bringen (unter Verwendung von <code>SabreSwap</code>)</li>
+<li class="">Layout/Routing: <code>TrivialLayout</code>, wobei dieselben physikalischen Qubit-Nummern wie virtuelle ausgewählt und bei Bedarf SWAPs eingefügt werden (mit <code>SabreSwap</code>), damit der Schaltkreis ausführbar ist</li>
 </ul></td></tr><tr><td>1</td><td><p>Leichte Optimierung:</p><ul>
 <li class="">Layout/Routing: Das Layout wird zunächst mit <code>TrivialLayout</code> versucht. Wenn zusätzliche SWAPs erforderlich sind, wird ein Layout mit einer minimalen Anzahl von SWAPs mithilfe von <code>SabreSwap</code> gefunden, dann versucht es mit <code>VF2LayoutPostLayout</code>, die besten Qubits im Graphen auszuwählen.</li>
 <li class=""><code>InverseCancellation</code></li>
@@ -44,7 +44,7 @@ Suchtiefe und Versuchen der Optimierungsfunktion. Da <code>TrivialLayout</code> 
 <li class=""><code>CommutativeCancellation</code></li>
 </ul></td></tr><tr><td>3</td><td><p>Hohe Optimierung:</p><ul>
 <li class="">Optimierungsstufe 2 + heuristisch weiter auf Layout/Routing optimiert mit größerem Aufwand/Versuchen</li>
-<li class="">Resynthese von Zwei-Qubit-Blöcken unter Verwendung der <a href="https://arxiv.org/abs/quant-ph/0507171" target="_blank" rel="noopener noreferrer" class="">Cartan KAK-Zerlegung</a>.</li>
+<li class="">Resynthese von Zwei-Qubit-Blöcken mithilfe der <a href="https://arxiv.org/abs/quant-ph/0507171" target="_blank" rel="noopener noreferrer" class="">Cartan-KAK-Zerlegung</a>.</li>
 <li class="">Unitaritätsbrechende Passes:<!-- -->
 <ul>
 <li class=""><code>OptimizeSwapBeforeMeasure</code>: Verschiebt die Messungen, um SWAPs zu vermeiden</li>
